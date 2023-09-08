@@ -15,13 +15,17 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
+const linkElement = document.createElement("link");
+linkElement.href = "task-03.css";
+document.head.appendChild(linkElement);
+
 images.forEach((image)=>{
   const li = document.createElement('li');
   const img = document.createElement('img');
 
   img.classList.add('gallery-image');
 
-  img.src = image.src;
+  img.src = image.url;
   img.alt = image.alt;
 
   li.appendChild(img);
