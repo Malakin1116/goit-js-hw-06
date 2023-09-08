@@ -15,19 +15,17 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const linkElement = document.createElement("link");
-linkElement.href = "task-03.css";
-document.head.appendChild(linkElement);
+ const linkElement = document.createElement("link");
+ linkElement.href = "../css/task-03.css";
+ linkElement.rel = "stylesheet";
+ document.head.appendChild(linkElement);
 
-images.forEach((image)=>{
-  const li = document.createElement('li');
-  const img = document.createElement('img');
 
-  img.classList.add('gallery-image');
-
-  img.src = image.url;
-  img.alt = image.alt;
-
-  li.appendChild(img);
-  gallery.appendChild(li);
+images.forEach((image) => {
+  const html = `
+    <li class="gallery-item">
+      <img class="gallery-image" src="${image.url}" alt="${image.alt}">
+    </li>
+  `;
+  gallery.insertAdjacentHTML('beforeend', html);
 });
