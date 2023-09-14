@@ -1,14 +1,14 @@
 
-const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector(".login-form");
 
-loginForm.addEventListener('submit', function (event) {
+loginForm.addEventListener("submit", function (event) {
   event.preventDefault(); 
   
   const emailInput = this.elements.email;
   const passwordInput = this.elements.password;
 
-  if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
-    alert('Усі поля повинні бути заповнені');
+  if (emailInput.value.trim() === "" || passwordInput.value.trim() === "") {
+    alert("Усі поля повинні бути заповнені");
     return;
   }
 

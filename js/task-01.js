@@ -1,9 +1,9 @@
 
 
 // 1)
-const ulElement = document.querySelector('ul#categories');
-const categoryItems = ulElement.querySelectorAll('li.item');
-console.log('Number of categories:', categoryItems.length);
+const ulElement = document.querySelector("ul#categories");
+const categoryItems = ulElement.querySelectorAll("li.item");
+console.log("Number of categories:", categoryItems.length);
 
 // 2)
 categoryItems.forEach((item)=>{
