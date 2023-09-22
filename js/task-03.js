@@ -16,7 +16,7 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
  const linkElement = document.createElement("link");
- linkElement.href = "../css/task-03.css";
+ linkElement.href = "./css/task-03.css";
  linkElement.rel = "stylesheet";
  document.head.appendChild(linkElement);
 
