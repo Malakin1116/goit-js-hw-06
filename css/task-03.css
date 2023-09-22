@@ -6,6 +6,10 @@
     padding: 0;
     align-items: center;
   }
+
+  .gallery-item {
+    width: 100%;
+  }
   
   .gallery-image {
     max-width: 100%;
