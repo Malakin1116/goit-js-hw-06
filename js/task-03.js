@@ -13,19 +13,24 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+// const linkElement = document.createElement("link");
+// linkElement.href = "./css/task-03.css";
+// linkElement.rel = "stylesheet";
+// document.head.appendChild(linkElement);
 
- const linkElement = document.createElement("link");
- linkElement.href = "./css/task-03.css";
- linkElement.rel = "stylesheet";
- document.head.appendChild(linkElement);
+function markup(arr) {
+  const ul = document.querySelector(".gallery");
+  
 
+  const images = arr.map((item) => `<li class="gallery-item">
+       <img class="gallery-image" 
+       src="${item.url}" 
+       alt="${item.alt}">
+      </li>`)
+    .join(""); 
+  
+  ul.insertAdjacentHTML("beforeend", images);
+  
+}
 
-images.forEach((image) => {
-  const html = `
-    <li class="gallery-item">
-      <img class="gallery-image" src="${image.url}" alt="${image.alt}">
-    </li>
-  `;
-  gallery.insertAdjacentHTML("beforeend", html);
-});
+markup(images);
